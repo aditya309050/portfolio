@@ -335,16 +335,16 @@ function App() {
         </div>
         <div className="nav-bottom" id="nav-bottom" ref={navBottomRef}>
           <div style={{display: 'flex', gap: '32px'}}><a href="#" className="nav-bottom-link">Twitter</a><a href="#" className="nav-bottom-link">GitHub</a><a href="#" className="nav-bottom-link">Discord</a></div>
-          <div style={{fontSize: '11px', color: '#555', letterSpacing: '2px'}}>EverSwap · Lab</div>
+          <div style={{fontSize: '11px', color: '#555', letterSpacing: '2px'}}>Aditya raj · Lab</div>
           <div style={{fontSize: '11px', color: '#555'}}>© 2026</div>
         </div>
       </div>
 
       {/* HEADER */}
       <header id="site-header">
-        <a href="#" className="logo">EVERSWAP</a>
+        <a href="#" className="logo">Aditya raj</a>
         <div className="header-right">
-          <span className="page-tag">Lab</span>
+          <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="page-tag" style={{ textDecoration: 'none' }}>GitHub</a>
           <button id="burger" aria-label="menu" className={isNavOpen ? 'active' : ''} onClick={toggleNav} ref={burgerRef}>
             <span className="bline"></span><span className="bline"></span><span className="bline"></span>
           </button>

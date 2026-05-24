@@ -85,15 +85,14 @@ header{
   padding:28px 40px;
   display:flex;align-items:center;justify-content:space-between;
   background:transparent;
-  mix-blend-mode:multiply;
 }
-.logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--ink);text-decoration:none}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:#000 !important;text-decoration:none}
 .header-right{display:flex;align-items:center;gap:40px}
-.page-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.page-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:#000 !important;text-transform:uppercase}
 #burger{display:flex;flex-direction:column;gap:5px;cursor:none;padding:8px;background:none;border:none;z-index:1001}
-.bline{width:28px;height:1.5px;background:var(--ink);transform-origin:center;transition:transform .5s cubic-bezier(.76,0,.24,1),opacity .3s,width .3s}
+.bline{width:28px;height:1.5px;background:#000 !important;transform-origin:center;transition:transform .5s cubic-bezier(.76,0,.24,1),opacity .3s,width .3s}
 .bline:nth-child(2){width:20px}
-#burger.active .bline{background:#f0ece3}
+#burger.active .bline{background:#ffffff}
 #burger.active .bline:nth-child(1){transform:translateY(6.5px) rotate(45deg);width:28px}
 #burger.active .bline:nth-child(2){opacity:0;transform:scaleX(0)}
 #burger.active .bline:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
