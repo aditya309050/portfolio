@@ -215,10 +215,10 @@ function App() {
 
     // count up stats
     tl.add(() => {
-      if (countExpRef.current) countUp(countExpRef.current, 24, 1200);
-      if (countLiveRef.current) countUp(countLiveRef.current, 9, 1200);
-      if (countGhRef.current) countUp(countGhRef.current, 3847, 1500);
-      if (countContribRef.current) countUp(countContribRef.current, 61, 1200);
+      if (countExpRef.current) countUp(countExpRef.current, 4, 1200);
+      if (countLiveRef.current) countUp(countLiveRef.current, 2, 1200);
+      if (countGhRef.current) countUp(countGhRef.current, 500, 1500);
+      if (countContribRef.current) countUp(countContribRef.current, 5, 1200);
     }, 1.0);
 
     // bottom strip cells
@@ -311,11 +311,11 @@ function App() {
           <nav className="nav-left">
             <div className="nav-counter">Menu</div>
             <ul className="nav-links-list">
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">Work</span><span className="nav-tag">12 projects</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('about', 'Who we are & our mission', 'Est. 2022')}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">About</span><span className="nav-tag">Our story</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'Experiments & open source', 'Ongoing')}><div className="nav-link-inner"><span className="nav-num">03</span><span className="nav-text">Lab</span><span className="nav-tag">Experimental</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('journal', 'Thoughts on design & code', 'Weekly')}><div className="nav-link-inner"><span className="nav-num">04</span><span className="nav-text">Journal</span><span className="nav-tag">Blog</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('contact', "Let's build something together", 'Open')}><div className="nav-link-inner"><span className="nav-num">05</span><span className="nav-text">Contact</span><span className="nav-tag">Hire us</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">Projects</span><span className="nav-tag">4 live</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('about', 'Frontend Web Developer', 'Kurage')}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">Experience</span><span className="nav-tag">Agency</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'React, Next.js, Node.js', 'Core')}><div className="nav-link-inner"><span className="nav-num">03</span><span className="nav-text">Skills</span><span className="nav-tag">Stack</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('journal', 'B.Tech CS Student', 'Ongoing')}><div className="nav-link-inner"><span className="nav-num">04</span><span className="nav-text">About</span><span className="nav-tag">Bio</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('contact', "Let's build something together", 'Available')}><div className="nav-link-inner"><span className="nav-num">05</span><span className="nav-text">Contact</span><span className="nav-tag">Hire me</span></div><div className="nav-link-line"></div></a></li>
             </ul>
           </nav>
           <aside className="nav-right-panel">
@@ -356,46 +356,46 @@ function App() {
         <div className="hero-left">
           <div className="hero-accent-box"></div>
           <div className="scramble-title" id="scramble-title" ref={scrambleTitleRef}>
-            <span className="word"><span className="word-inner" data-text="Exp">Exp</span></span>
-            <span className="word"><span className="word-inner" data-text="erim">erim</span></span>
-            <span className="word"><span className="word-inner" data-text="ents">ents</span></span>
+            <span className="word"><span className="word-inner" data-text="Full">Full</span></span>
+            <span className="word"><span className="word-inner" data-text="Stack">Stack</span></span>
+            <span className="word"><span className="word-inner" data-text="Dev">Dev</span></span>
           </div>
         </div>
         <div className="hero-right">
           <div className="hero-tag">
             <div className="tag-line"></div>
-            <span>Research &amp; Development</span>
+            <span>Aditya Raj — Portfolio</span>
           </div>
           <div className="hero-desc">
-            <p>Where we break things on purpose. Prototypes, open-source tools, and half-finished ideas that occasionally become real products.</p>
+            <p>Ambitious Full Stack Developer with strong expertise in building responsive, high-performance web applications using React.js and Next.js.</p>
           </div>
           <div className="hero-stat-row" id="hero-stats">
             <div className="hero-stat">
               <div className="hero-stat-num" id="count-exp" ref={countExpRef}>0</div>
-              <div className="hero-stat-label">Experiments</div>
+              <div className="hero-stat-label">Projects</div>
             </div>
             <div className="hero-stat">
               <div className="hero-stat-num" id="count-live" ref={countLiveRef}>0</div>
-              <div className="hero-stat-label">Live now</div>
+              <div className="hero-stat-label">Client Sites</div>
             </div>
             <div className="hero-stat">
               <div className="hero-stat-num" id="count-gh" ref={countGhRef}>0</div>
-              <div className="hero-stat-label">GitHub stars</div>
+              <div className="hero-stat-label">Hours Learning</div>
             </div>
             <div className="hero-stat">
               <div className="hero-stat-num" id="count-contrib" ref={countContribRef}>0</div>
-              <div className="hero-stat-label">Contributors</div>
+              <div className="hero-stat-label">Months Exp.</div>
             </div>
           </div>
         </div>
 
         {/* bottom info strip */}
         <div className="hero-bottom">
-          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--red)'}}></div>Solidity / EVM</div>
-          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--blue)'}}></div>TypeScript</div>
-          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--green)'}}></div>WebGL / Three.js</div>
-          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--yellow)'}}></div>Rust / WASM</div>
-          <div className="hb-cell" style={{justifyContent: 'flex-end', fontFamily: "'DM Mono', monospace", fontSize: '10px', letterSpacing: '1px', color: 'var(--muted)'}}>Last updated: today</div>
+          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--red)'}}></div>React / Next.js</div>
+          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--blue)'}}></div>TypeScript / JS</div>
+          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--green)'}}></div>Node.js / API</div>
+          <div className="hb-cell"><div className="hb-dot" style={{background: 'var(--yellow)'}}></div>Tailwind / UI</div>
+          <div className="hb-cell" style={{justifyContent: 'flex-end', fontFamily: "'DM Mono', monospace", fontSize: '10px', letterSpacing: '1px', color: 'var(--muted)'}}>Based in Bihar, India</div>
         </div>
       </section>
 
@@ -405,7 +405,7 @@ function App() {
           {[...Array(16)].map((_, i) => (
             <div className="ticker-item" key={i}>
               <span className="ticker-star">★</span>
-              {["OPEN SOURCE", "ON-CHAIN", "WEB3 NATIVE", "EXPERIMENTAL", "PROOF OF CONCEPT", "RESEARCH", "CREATIVE CODE", "INTEROPERABILITY"][i % 8]}
+              {["FULL STACK", "REACT.JS", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "TAILWIND CSS", "RESPONSIVE", "WEB DEV"][i % 8]}
             </div>
           ))}
         </div>
@@ -414,8 +414,8 @@ function App() {
       {/* EXPERIMENTS GRID */}
       <section className="lab-section">
         <div className="lab-header">
-          <div className="lab-h-title" id="lh-title">Selected Experiments</div>
-          <div className="lab-h-meta" id="lh-meta">2022 — 2026<br />Ongoing research</div>
+          <div className="lab-h-title" id="lh-title">Selected Projects</div>
+          <div className="lab-h-meta" id="lh-meta">2024 — 2025<br />Freelance & Personal</div>
         </div>
 
         <div className="grid-broken" id="exp-grid">
@@ -423,90 +423,91 @@ function App() {
           <div className="exp-tile col-5 row-4 tile-ink">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 001</div>
-              <div className="tile-name">Mempool<br />Viz</div>
-              <div className="tile-meta">WebGL · Live</div>
+              <div className="tile-num">PRJ — 001</div>
+              <div className="tile-name">Small<br />Screen</div>
+              <div className="tile-meta">Freelance · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Marketing Agency</div></div>
           </div>
 
           <div className="exp-tile col-7 row-2 tile-yellow">
-            <div className="tile-status status-wip"></div>
+            <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 002</div>
-              <div className="tile-name">Gas Oracle</div>
-              <div className="tile-meta">Solidity · WIP</div>
+              <div className="tile-num">PRJ — 002</div>
+              <div className="tile-name">Lakhi Lraj Welfare</div>
+              <div className="tile-meta">NGO · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Freelance</div></div>
           </div>
 
           <div className="exp-tile col-4 row-2">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 003</div>
-              <div className="tile-name">TWAP Hook</div>
-              <div className="tile-meta">Uniswap v4</div>
+              <div className="tile-num">PRJ — 003</div>
+              <div className="tile-name">Global Trend</div>
+              <div className="tile-meta">Full Stack App</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Next.js</div></div>
           </div>
 
           <div className="exp-tile col-3 row-2 tile-red">
+            <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 004</div>
-              <div className="tile-name">Intent Router</div>
-              <div className="tile-meta">ERC-4337</div>
+              <div className="tile-num">PRJ — 004</div>
+              <div className="tile-name">Travelers</div>
+              <div className="tile-meta">Travel Platform</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">React & Strapi</div></div>
           </div>
 
           {/* Row 2 */}
           <div className="exp-tile col-4 row-3 tile-blue">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 005</div>
-              <div className="tile-name">Zk<br />Prover</div>
-              <div className="tile-meta">Circom · Live</div>
+              <div className="tile-num">EXP — 001</div>
+              <div className="tile-name">Kurage<br />Agency</div>
+              <div className="tile-meta">Frontend Dev</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">5 Months</div></div>
           </div>
 
           <div className="exp-tile col-8 row-3 tile-type-only">
             <div className="tile-inner">
-              <div className="tile-num" style={{textAlign: 'center', marginBottom: '12px'}}>EXP — 006</div>
-              <div className="tile-name" style={{color: 'var(--ink)'}}>Liquidity<br />Topology</div>
-              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>Graph Theory · Research</div>
+              <div className="tile-num" style={{textAlign: 'center', marginBottom: '12px'}}>SKILL — 001</div>
+              <div className="tile-name" style={{color: 'var(--ink)'}}>Frontend<br />Mastery</div>
+              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>React.js · Next.js · Tailwind</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Core Stack</div></div>
           </div>
 
           {/* Row 3 */}
           <div className="exp-tile col-3 row-2">
-            <div className="tile-status status-archived"></div>
+            <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 007</div>
-              <div className="tile-name">MEV Shield</div>
-              <div className="tile-meta">Archived</div>
+              <div className="tile-num">EDU — 001</div>
+              <div className="tile-name">B.Tech CS</div>
+              <div className="tile-meta">RKDF University</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">1st Semester</div></div>
           </div>
 
           <div className="exp-tile col-6 row-2 tile-green">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 008</div>
-              <div className="tile-name">Chain<br />Indexer</div>
-              <div className="tile-meta">Rust · 1.2M blocks/s</div>
+              <div className="tile-num">SKILL — 002</div>
+              <div className="tile-name">Backend<br />Journey</div>
+              <div className="tile-meta">Node.js · Express · REST</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Actively Learning</div></div>
           </div>
 
           <div className="exp-tile col-3 row-2 tile-yellow">
             <div className="tile-inner">
-              <div className="tile-num">EXP — 009</div>
-              <div className="tile-name">Slippage<br />ML</div>
-              <div className="tile-meta">Python · WIP</div>
+              <div className="tile-num">EXP — 002</div>
+              <div className="tile-name">500+<br />Hours</div>
+              <div className="tile-meta">Self-Directed</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open experiment</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Dedication</div></div>
           </div>
         </div>
       </section>
@@ -514,40 +515,38 @@ function App() {
       {/* LIST */}
       <section className="list-section">
         <div className="list-header">
-          <span className="list-h">All experiments</span>
-          <span className="list-h">12 total</span>
+          <span className="list-h">Experience & Skills</span>
+          <span className="list-h">Details</span>
         </div>
 
         <div id="exp-list">
-          <div className="exp-list-item"><span className="eli-num">001</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--red)'}}></span>Mempool Visualizer</span><span className="eli-cat">WebGL / Three.js</span><span className="eli-year">2026</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">002</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Gas Oracle v2</span><span className="eli-cat">Solidity / EVM</span><span className="eli-year">2026</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">003</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>TWAP Hook</span><span className="eli-cat">Uniswap v4 / Hooks</span><span className="eli-year">2025</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">004</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Intent Router</span><span className="eli-cat">ERC-4337 / AA</span><span className="eli-year">2025</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">005</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>ZK Prover Lib</span><span className="eli-cat">Circom / Rust</span><span className="eli-year">2025</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">006</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>Liquidity Topology</span><span className="eli-cat">Graph Theory / Research</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">007</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>MEV Shield (archived)</span><span className="eli-cat">Flashbots / Go</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">008</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Chain Indexer</span><span className="eli-cat">Rust / WASM</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">009</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Slippage ML</span><span className="eli-cat">Python / TensorFlow</span><span className="eli-year">2023</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">010</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--red)'}}></span>Yield Optimizer</span><span className="eli-cat">Solidity / Hardhat</span><span className="eli-year">2023</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">011</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>Cross-chain Relay</span><span className="eli-cat">LayerZero / TypeScript</span><span className="eli-year">2023</span><span className="eli-arrow">↗</span></div>
-          <div className="exp-list-item"><span className="eli-num">012</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>On-chain SVG Gen</span><span className="eli-cat">Solidity / SVG</span><span className="eli-year">2022</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">EXP</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--red)'}}></span>Frontend Web Developer</span><span className="eli-cat">Kurage (Digital Agency)</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">PRJ</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Small Screen Marketing</span><span className="eli-cat">Freelance Project</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">PRJ</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>Lakhi Lraj Welfare</span><span className="eli-cat">Freelance NGO</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">PRJ</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Global Trend App</span><span className="eli-cat">Full Stack / Next.js</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">PRJ</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>Travelers Platform</span><span className="eli-cat">React / Strapi</span><span className="eli-year">2024</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>React.js & Next.js</span><span className="eli-cat">Core Frameworks</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>JavaScript & TypeScript</span><span className="eli-cat">Languages</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Tailwind CSS</span><span className="eli-cat">Styling / UI</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Node.js & Express</span><span className="eli-cat">Backend / APIs</span><span className="eli-year">Learning</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">EDU</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--red)'}}></span>B.Tech (Computer Science)</span><span className="eli-cat">RKDF University</span><span className="eli-year">Pursuing</span><span className="eli-arrow">↗</span></div>
         </div>
       </section>
 
       {/* FOOTER CTA */}
       <footer className="lab-footer">
-        <div className="lf-bg-text">LAB</div>
+        <div className="lf-bg-text">HIRE</div>
         <div className="lf-content">
-          <div className="lf-title">Got a wild<br />idea?</div>
-          <div className="lf-sub">We prototype fast. Drop us a brief and we'll have something to show you in 72 hours.</div>
+          <div className="lf-title">Let's build<br />together</div>
+          <div className="lf-sub">Available for freelance opportunities and full-time roles. Let's discuss your next project.</div>
           <div className="lf-btns">
-            <a href="#" className="btn-ink">Start a project →</a>
-            <a href="#" className="btn-outline">View GitHub ↗</a>
+            <a href="mailto:adityaraj309050@gmail.com" className="btn-ink">Contact Me →</a>
+            <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="btn-outline">View GitHub ↗</a>
           </div>
         </div>
         <div className="lf-stat-col">
-          <div className="lf-big-num">72h</div>
-          <div className="lf-label">Prototype turnaround</div>
+          <div className="lf-big-num">100%</div>
+          <div className="lf-label">Client Satisfaction</div>
         </div>
       </footer>
     </>
