@@ -420,15 +420,15 @@ function App() {
 
         <div className="grid-broken" id="exp-grid">
           {/* Row 1 */}
-          <div className="exp-tile col-5 row-4 tile-ink">
+          <a href="https://travelers-omega.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-5 row-4 tile-ink" aria-label="Open Travelers project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
               <div className="tile-num">PRJ — 001</div>
-              <div className="tile-name">Small<br />Screen</div>
-              <div className="tile-meta">Freelance · Live</div>
+              <div className="tile-name">Travelers</div>
+              <div className="tile-meta">Travel Platform · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Marketing Agency</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           <div className="exp-tile col-7 row-2 tile-yellow">
             <div className="tile-status status-live"></div>
@@ -461,15 +461,15 @@ function App() {
           </div>
 
           {/* Row 2 */}
-          <div className="exp-tile col-4 row-3 tile-blue">
+          <a href="https://digital-hero-theta.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-4 row-3 tile-blue" aria-label="Open Kurage Agency project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EXP — 001</div>
-              <div className="tile-name">Kurage<br />Agency</div>
-              <div className="tile-meta">Frontend Dev</div>
+              <div className="tile-num"> PRJ — 005</div>
+              <div className="tile-name">Digital hero</div>
+              <div className="tile-meta">Frontend Dev · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">5 Months</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           <div className="exp-tile col-8 row-3 tile-type-only">
             <div className="tile-inner">
