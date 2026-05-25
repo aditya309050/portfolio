@@ -343,14 +343,9 @@ body.nav-open #nav-overlay::after {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 0.5s, transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.nav-preview-img.active {
   opacity: 1;
   transform: scale(1);
+  transition: opacity 0.5s, transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .img-work { background: linear-gradient(135deg, #1a0a2e, #0d1a2e, #0a2e1a); }

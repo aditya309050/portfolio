@@ -414,8 +414,8 @@ function App() {
       {/* EXPERIMENTS GRID */}
       <section className="lab-section">
         <div className="lab-header">
-          <div className="lab-h-title" id="lh-title">Selected Projects</div>
-          <div className="lab-h-meta" id="lh-meta">2024 — 2025<br />Freelance & Personal</div>
+          <div className="lab-h-title" id="lh-title">Projects</div>
+          <div className="lab-h-meta" id="lh-meta">2025 — 2026<br />Freelance & Personal</div>
         </div>
 
         <div className="grid-broken" id="exp-grid">
@@ -474,8 +474,8 @@ function App() {
           <div className="exp-tile col-8 row-3 tile-type-only">
             <div className="tile-inner">
               <div className="tile-num" style={{textAlign: 'center', marginBottom: '12px'}}>SKILL — 001</div>
-              <div className="tile-name" style={{color: 'var(--ink)'}}>Frontend<br />Mastery</div>
-              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>React.js · Next.js · Tailwind</div>
+              <div className="tile-name" style={{color: 'var(--ink)'}}>Frontend<br /> & UI</div>
+              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>React.js · Next.js · TypeScript · Tailwind CSS ·  · Redux / Zustand · Framer Motion · GSAP · Responsive Design</div>
             </div>
             <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Core Stack</div></div>
           </div>
@@ -495,10 +495,10 @@ function App() {
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
               <div className="tile-num">SKILL — 002</div>
-              <div className="tile-name">Backend<br />Journey</div>
-              <div className="tile-meta">Node.js · Express · REST</div>
+              <div className="tile-name">Backend<br /> & Deploy</div>
+              <div className="tile-meta">Node.js · Express.js · REST APIs · MongoDB · PostgreSQL · Firebase · npm / pnpm · Vercel · Firebase Hosting</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Actively Learning</div></div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Infra & APIs</div></div>
           </div>
 
           <div className="exp-tile col-3 row-2 tile-yellow">
@@ -520,11 +520,25 @@ function App() {
         </div>
 
         <div id="exp-list">
-                  <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>React.js & Next.js</span><span className="eli-cat">Core Frameworks</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
-                  <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>JavaScript & TypeScript</span><span className="eli-cat">Languages</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
-                  <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Tailwind CSS</span><span className="eli-cat">Styling / UI</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
-                  <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Node.js & Express</span><span className="eli-cat">Backend / APIs</span><span className="eli-year">Learning</span><span className="eli-arrow">↗</span></div>
-                  <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>GSAP</span><span className="eli-cat">Animation</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>MongoDB</span><span className="eli-cat">Database</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>PostgreSQL</span><span className="eli-cat">Database</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Firebase</span><span className="eli-cat">Backend / Auth</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>React.js</span><span className="eli-cat">Frontend</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>Next.js</span><span className="eli-cat">Framework</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>TypeScript</span><span className="eli-cat">Language</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>JavaScript (ES6+)</span><span className="eli-cat">Language</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Tailwind CSS</span><span className="eli-cat">Styling / UI</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>npm / pnpm</span><span className="eli-cat">Package Managers</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>Vercel</span><span className="eli-cat">Deployment</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>Firebase Hosting</span><span className="eli-cat">Hosting</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Node.js</span><span className="eli-cat">Runtime</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--blue)'}}></span>Express.js</span><span className="eli-cat">Backend Framework</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>REST APIs</span><span className="eli-cat">API Design</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--ink)'}}></span>Redux / Zustand</span><span className="eli-cat">State Management</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--muted)'}}></span>Framer Motion</span><span className="eli-cat">Animation</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--green)'}}></span>GSAP</span><span className="eli-cat">Animation</span><span className="eli-year">Proficient</span><span className="eli-arrow">↗</span></div>
+          <div className="exp-list-item"><span className="eli-num">SKL</span><span className="eli-name"><span className="eli-chip" style={{background: 'var(--yellow)'}}></span>Responsive Design</span><span className="eli-cat">UX / Layout</span><span className="eli-year">Expert</span><span className="eli-arrow">↗</span></div>
         </div>
       </section>
 
