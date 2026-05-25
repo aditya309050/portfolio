@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import gsap from 'gsap';
+import ContactPage from './ContactPage';
 import './index.css';
 
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%';
@@ -311,11 +313,10 @@ function App() {
           <nav className="nav-left">
             <div className="nav-counter">Menu</div>
             <ul className="nav-links-list">
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">Projects</span><span className="nav-tag">4 live</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('about', 'Frontend Web Developer', 'Kurage')}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">Experience</span><span className="nav-tag">Agency</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'React, Next.js, Node.js', 'Core')}><div className="nav-link-inner"><span className="nav-num">03</span><span className="nav-text">Skills</span><span className="nav-tag">Stack</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('journal', 'B.Tech CS Student', 'Ongoing')}><div className="nav-link-inner"><span className="nav-num">04</span><span className="nav-text">About</span><span className="nav-tag">Bio</span></div><div className="nav-link-line"></div></a></li>
-              <li className="nav-item"><a href="#" className="nav-link" onMouseEnter={() => handleNavHover('contact', "Let's build something together", 'Available')}><div className="nav-link-inner"><span className="nav-num">05</span><span className="nav-text">Contact</span><span className="nav-tag">Hire me</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#projects" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">My Projects</span><span className="nav-tag">4 live</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#skills" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'React, Next.js, Node.js', 'Core')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">Skills</span><span className="nav-tag">Stack</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#about" className="nav-link" onMouseEnter={() => handleNavHover('journal', 'B.Tech CS Student', 'Ongoing')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">03</span><span className="nav-text">About</span><span className="nav-tag">Bio</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><Link to="/contact" className="nav-link" onMouseEnter={() => handleNavHover('contact', "Let's build something together", 'Available')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">04</span><span className="nav-text">Contact</span><span className="nav-tag">Hire me</span></div><div className="nav-link-line"></div></Link></li>
             </ul>
           </nav>
           <aside className="nav-right-panel">
@@ -352,7 +353,7 @@ function App() {
       </header>
 
       {/* HERO */}
-      <section className="hero">
+      <section className="hero" id="about">
         <div className="hero-left">
           <div className="hero-accent-box"></div>
           <div className="scramble-title" id="scramble-title" ref={scrambleTitleRef}>
@@ -412,7 +413,7 @@ function App() {
       </div>
 
       {/* EXPERIMENTS GRID */}
-      <section className="lab-section">
+      <section className="lab-section" id="projects">
         <div className="lab-header">
           <div className="lab-h-title" id="lh-title">Projects</div>
           <div className="lab-h-meta" id="lh-meta">2025 — 2026<br />Freelance & Personal</div>
@@ -501,21 +502,22 @@ function App() {
             <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
           </a>
 
-          <div className="exp-tile col-3 row-2 tile-yellow">
+          <a href="https://coaching-demo-rouge.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-3 row-2 tile-yellow" aria-label="Open coaching institute freelance project">
             <div className="tile-inner">
-              <div className="tile-num">EXP — 002</div>
-              <div className="tile-name">500+<br />Hours</div>
-              <div className="tile-meta">Self-Directed</div>
+              <div className="tile-num">PRJ — 009</div>
+              <div className="tile-name">coaching<br />institute</div>
+              <div className="tile-meta">Freelance Project · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Dedication</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
         </div>
       </section>
 
       {/* LIST */}
-      <section className="list-section">
+      <section className="list-section" id="experience">
+        <div id="skills"></div>
         <div className="list-header">
-          <span className="list-h">Experience & Skills</span>
+          <span className="list-h"> Skills</span>
           <span className="list-h">Details</span>
         </div>
 
@@ -543,13 +545,13 @@ function App() {
       </section>
 
       {/* FOOTER CTA */}
-      <footer className="lab-footer">
+      <footer className="lab-footer" id="contact">
         <div className="lf-bg-text">HIRE</div>
         <div className="lf-content">
           <div className="lf-title">Let's build<br />together</div>
           <div className="lf-sub">Available for freelance opportunities and full-time roles. Let's discuss your next project.</div>
           <div className="lf-btns">
-            <a href="mailto:adityaraj309050@gmail.com" className="btn-ink">Contact Me →</a>
+            <Link to="/contact" className="btn-ink">Contact Me →</Link>
             <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="btn-outline">View GitHub ↗</a>
           </div>
         </div>
@@ -562,4 +564,15 @@ function App() {
   );
 }
 
-export default App;
+function AppWithRoutes() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<App />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default AppWithRoutes;
