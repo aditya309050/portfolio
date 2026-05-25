@@ -430,25 +430,25 @@ function App() {
             <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
           </a>
 
-          <div className="exp-tile col-7 row-2 tile-yellow">
+          <a href="https://lakhilrajwelfarefoundation.com/" target="_blank" rel="noreferrer" className="exp-tile col-7 row-2 tile-yellow" aria-label="Open Lakhi Lraj Welfare project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
               <div className="tile-num">PRJ — 002</div>
               <div className="tile-name">Lakhi Lraj Welfare</div>
               <div className="tile-meta">NGO · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Freelance</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
-          <div className="exp-tile col-4 row-2">
+          <a href="https://global-trend-nine.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-4 row-2" aria-label="Open Global Trend project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
               <div className="tile-num">PRJ — 003</div>
               <div className="tile-name">Global Trend</div>
-              <div className="tile-meta">Full Stack App</div>
+              <div className="tile-meta">Project Management System </div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Next.js</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           <div className="exp-tile col-3 row-2 tile-red">
             <div className="tile-status status-live"></div>
@@ -471,35 +471,35 @@ function App() {
             <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
           </a>
 
-          <div className="exp-tile col-8 row-3 tile-type-only">
+          <a href="https://mall-red.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-8 row-3 tile-type-only" aria-label="Open Mall experiment project">
             <div className="tile-inner">
-              <div className="tile-num" style={{textAlign: 'center', marginBottom: '12px'}}>SKILL — 001</div>
-              <div className="tile-name" style={{color: 'var(--ink)'}}>Frontend<br /> & UI</div>
-              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>React.js · Next.js · TypeScript · Tailwind CSS ·  · Redux / Zustand · Framer Motion · GSAP · Responsive Design</div>
+              <div className="tile-num" style={{textAlign: 'center', marginBottom: '12px'}}>PRJ — 006</div>
+              <div className="tile-name" style={{color: 'var(--ink)'}}>Mall</div>
+              <div className="tile-meta" style={{textAlign: 'center', marginTop: '8px'}}>Experiment Project · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Core Stack</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           {/* Row 3 */}
-          <div className="exp-tile col-3 row-2">
+          <a href="https://netflix-gtp-two.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-3 row-2" aria-label="Open Netflix clone project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">EDU — 001</div>
-              <div className="tile-name">B.Tech CS</div>
-              <div className="tile-meta">RKDF University</div>
+              <div className="tile-num">PRJ — 007</div>
+              <div className="tile-name">Netflix clone</div>
+              <div className="tile-meta">Clone · Live</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">1st Semester</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
-          <div className="exp-tile col-6 row-2 tile-green">
+          <a href="https://small-screen1.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-6 row-2 tile-green" aria-label="Open smallscale marketing project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
-              <div className="tile-num">SKILL — 002</div>
-              <div className="tile-name">Backend<br /> & Deploy</div>
-              <div className="tile-meta">Node.js · Express.js · REST APIs · MongoDB · PostgreSQL · Firebase · npm / pnpm · Vercel · Firebase Hosting</div>
+              <div className="tile-num">PRJ — 008</div>
+              <div className="tile-name">smallscale<br />marketing</div>
+              <div className="tile-meta">Live Project · Marketing / Small Screen</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Infra & APIs</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           <div className="exp-tile col-3 row-2 tile-yellow">
             <div className="tile-inner">
