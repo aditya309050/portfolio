@@ -10,6 +10,26 @@ import ScrollToTop from './ScrollToTop';
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%';
 
 function App() {
+    const [showHeader, setShowHeader] = useState(true);
+    const lastScrollY = useRef(window.scrollY);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY < 10) {
+          setShowHeader(true);
+          lastScrollY.current = window.scrollY;
+          return;
+        }
+        if (window.scrollY > lastScrollY.current) {
+          setShowHeader(false); // scrolling down
+        } else {
+          setShowHeader(true); // scrolling up
+        }
+        lastScrollY.current = window.scrollY;
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
   const canvasRef = useRef(null);
   const curRef = useRef(null);
   const curRingRef = useRef(null);
@@ -344,9 +364,16 @@ function App() {
       </div>
 
       {/* HEADER */}
-      <header id="site-header">
-        <a href="#" className="logo">Aditya raj</a>
-        <div className="header-right" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+      <header id="site-header" style={{
+        transition: 'transform 0.3s cubic-bezier(.4,0,.2,1)',
+        transform: showHeader ? 'translateY(0)' : 'translateY(-100%)',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 1000
+      }}>
+        <div className="header-right" style={{ display: 'flex', gap: '32px', alignItems: 'center', justifyContent: 'flex-end', width: '100%' }}>
           <a href="#projects" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Projects</a>
           <a href="#skills" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Skills</a>
           <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>GitHub</a>
