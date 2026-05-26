@@ -346,11 +346,10 @@ function App() {
       {/* HEADER */}
       <header id="site-header">
         <a href="#" className="logo">Aditya raj</a>
-        <div className="header-right">
-          <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="page-tag" style={{ textDecoration: 'none' }}>GitHub</a>
-          {/* <button id="burger" aria-label="menu" className={isNavOpen ? 'active' : ''} onClick={toggleNav} ref={burgerRef}>
-            <span className="bline"></span><span className="bline"></span><span className="bline"></span>
-          </button> */}
+        <div className="header-right" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+          <a href="#projects" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Projects</a>
+          <a href="#skills" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Skills</a>
+          <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>GitHub</a>
         </div>
       </header>
 
