@@ -376,15 +376,7 @@ export default function ContactPage() {
         <div className="cp-cursor" ref={cursorRef} />
         <div className="cp-cursor-ring" ref={ringRef} />
 
-        <nav className="cp-nav">
-          <div className="cp-nav-logo">Portfolio ©2025</div>
-          <ul className="cp-nav-links">
-            <li><a href="/">Work</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/contact" className="active">Contact</a></li>
-          </ul>
-        </nav>
+        {/* Navigation removed as requested */}
 
         <section className="cp-hero">
           <div className="cp-hero-watermark">CONTACT</div>

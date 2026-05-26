@@ -311,7 +311,7 @@ function App() {
         <div className="nav-panel bot"></div>
         <div id="nav-content" ref={navContentRef}>
           <nav className="nav-left">
-            <div className="nav-counter">Menu</div>
+            {/* <div className="nav-counter">Menu</div> */}
             <ul className="nav-links-list">
               <li className="nav-item"><a href="#projects" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">My Projects</span><span className="nav-tag">4 live</span></div><div className="nav-link-line"></div></a></li>
               <li className="nav-item"><a href="#skills" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'React, Next.js, Node.js', 'Core')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">Skills</span><span className="nav-tag">Stack</span></div><div className="nav-link-line"></div></a></li>
@@ -346,9 +346,9 @@ function App() {
         <a href="#" className="logo">Aditya raj</a>
         <div className="header-right">
           <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="page-tag" style={{ textDecoration: 'none' }}>GitHub</a>
-          <button id="burger" aria-label="menu" className={isNavOpen ? 'active' : ''} onClick={toggleNav} ref={burgerRef}>
+          {/* <button id="burger" aria-label="menu" className={isNavOpen ? 'active' : ''} onClick={toggleNav} ref={burgerRef}>
             <span className="bline"></span><span className="bline"></span><span className="bline"></span>
-          </button>
+          </button> */}
         </div>
       </header>
 
