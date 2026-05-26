@@ -275,9 +275,8 @@ const styles = `
 
 const contactItems = [
   { type: "Email", value: "adityaraj309050@gmail.com", href: "mailto:adityaraj309050@gmail.com" },
-  { type: "Phone", value: "+91 12345 67890", href: "tel:+911234567890" },
+  { type: "Phone", value: "8969940709", href: "tel:8969940709" },
   { type: "Location", value: "Bihar, India", href: "#" },
-  { type: "Response time", value: "Within 24 hours", href: "#" },
 ];
 
 const socialLinks = [
@@ -389,7 +388,6 @@ export default function ContactPage() {
             <div className="cp-hero-meta">
               <p className="cp-hero-sub">
                 Available for freelance opportunities and full-time roles.
-                Let's discuss your next project.
               </p>
               <div className="cp-hero-stat">
                 <span className="num">100%</span>
@@ -402,8 +400,6 @@ export default function ContactPage() {
         <div className="cp-grid">
           <div className="cp-info-panel">
             <div>
-              <div className="cp-section-title">02 — Direct contact</div>
-
               {contactItems.map(({ type, value, href }, i) => (
                 <a
                   key={type}
