@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import gsap from 'gsap';
 import ContactPage from './ContactPage';
 import './index.css';
+import ScrollToTop from './ScrollToTop';
 
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%';
 
@@ -17,6 +18,7 @@ function App() {
   const navContentRef = useRef(null);
   const navBottomRef = useRef(null);
   const navOverlayRef = useRef(null);
+  // eslint-disable-next-line no-unused-vars
   const burgerRef = useRef(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -571,6 +573,7 @@ function AppWithRoutes() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<App />} />
       </Routes>
+      <ScrollToTop />
     </Router>
   );
 }
