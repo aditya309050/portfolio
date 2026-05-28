@@ -239,7 +239,7 @@ function App() {
 
     // count up stats
     tl.add(() => {
-      if (countExpRef.current) countUp(countExpRef.current, 4, 1200);
+      if (countExpRef.current) countUp(countExpRef.current, 9, 1200);
       if (countLiveRef.current) countUp(countLiveRef.current, 2, 1200);
       if (countGhRef.current) countUp(countGhRef.current, 500, 1500);
       if (countContribRef.current) countUp(countContribRef.current, 5, 1200);
@@ -335,7 +335,7 @@ function App() {
           <nav className="nav-left">
             {/* <div className="nav-counter">Menu</div> */}
             <ul className="nav-links-list">
-              <li className="nav-item"><a href="#projects" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">My Projects</span><span className="nav-tag">4 live</span></div><div className="nav-link-line"></div></a></li>
+              <li className="nav-item"><a href="#projects" className="nav-link" onMouseEnter={() => handleNavHover('work', 'Selected projects & case studies', '2024–2026')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">01</span><span className="nav-text">My Projects</span><span className="nav-tag">9 live</span></div><div className="nav-link-line"></div></a></li>
               <li className="nav-item"><a href="#skills" className="nav-link" onMouseEnter={() => handleNavHover('lab', 'React, Next.js, Node.js', 'Core')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">02</span><span className="nav-text">Skills</span><span className="nav-tag">Stack</span></div><div className="nav-link-line"></div></a></li>
               <li className="nav-item"><a href="#about" className="nav-link" onMouseEnter={() => handleNavHover('journal', 'B.Tech CS Student', 'Ongoing')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">03</span><span className="nav-text">About</span><span className="nav-tag">Bio</span></div><div className="nav-link-line"></div></a></li>
               <li className="nav-item"><Link to="/contact" className="nav-link" onMouseEnter={() => handleNavHover('contact', "Let's build something together", 'Available')} onClick={toggleNav}><div className="nav-link-inner"><span className="nav-num">04</span><span className="nav-text">Contact</span><span className="nav-tag">Hire me</span></div><div className="nav-link-line"></div></Link></li>
