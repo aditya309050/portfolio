@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap');
@@ -47,8 +47,7 @@ const styles = `
     font-family: 'Space Mono', monospace; font-size: 11px;
     letter-spacing: .1em; text-transform: uppercase;
     text-decoration: none; color: var(--muted);
-    position: relative; transition: color .2s;
-    display: flex; align-items: center; gap: .5rem;
+    transition: color .2s;
   }
   .cp-nav-back:hover { color: var(--ink); }
 
@@ -56,24 +55,33 @@ const styles = `
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: calc(100vh - 64px);
+    position: relative;
+  }
+
+  .cp-body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #C8401A;
+    transform: translateX(-50%);
+    opacity: .95;
   }
 
   .cp-left {
-    background: var(--panel-left);
-    border-right: 1px solid var(--border);
     padding: 4rem 4rem 3rem;
-    display: flex; flex-direction: column; justify-content: space-between;
+    display: flex; flex-direction: column; justify-content: center;
     position: relative; overflow: hidden;
   }
 
-  .cp-wm {
-    position: absolute;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(8rem, 18vw, 18rem);
-    color: rgba(15,14,14,.055);
-    bottom: -1rem; left: -1rem;
-    letter-spacing: .02em; user-select: none; pointer-events: none; line-height: 1;
-    animation: cpDrift 1.2s .4s cubic-bezier(.16,1,.3,1) both;
+  .cp-hero-copy {
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ink);
+    opacity: .9;
   }
 
   .cp-tag {
@@ -208,68 +216,6 @@ const styles = `
   .cp-pill span, .cp-pill-arrow { position: relative; z-index: 1; }
   .cp-pill-arrow { font-size: 10px; }
 
-  .cp-avail {
-    display: flex; align-items: center; gap: 1rem;
-    padding: 1.2rem 1.5rem; border: 1px solid var(--border);
-    opacity: 0; transform: translateY(14px);
-    transition: opacity .5s .6s ease, transform .5s .6s ease;
-  }
-  .cp-avail.vis { opacity: 1; transform: translateY(0); }
-  .cp-avail-dot {
-    width: 9px; height: 9px; border-radius: 50%;
-    background: #27AE60; flex-shrink: 0; animation: cpPulse 2s infinite;
-  }
-  .cp-avail-txt { font-size: 13px; line-height: 1.45; }
-  .cp-avail-txt strong { display: block; font-weight: 500; font-size: 13.5px; }
-  .cp-avail-txt span { color: var(--muted); font-size: 11.5px; }
-
-  .cp-form { display: flex; flex-direction: column; }
-  .cp-field { display: flex; flex-direction: column; margin-bottom: 1.8rem; }
-  .cp-field label {
-    font-family: 'Space Mono', monospace; font-size: 10px;
-    letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem;
-  }
-  .cp-field input, .cp-field textarea {
-    background: transparent; border: none;
-    border-bottom: 1.5px solid var(--border);
-    padding: .7rem 0; font-family: 'DM Sans', sans-serif; font-size: 15px;
-    color: var(--ink); outline: none; caret-color: #C8401A; transition: border-color .3s;
-  }
-  .cp-field input:focus, .cp-field textarea:focus { border-color: var(--ink); }
-  .cp-field input::placeholder, .cp-field textarea::placeholder { color: rgba(15,14,14,.28); }
-  .cp-field textarea { resize: none; height: 80px; }
-  .cp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-
-  .cp-send {
-    display: inline-flex; align-items: center; gap: .9rem;
-    background: var(--ink); color: var(--cream);
-    border: none; padding: 1rem 2.2rem;
-    font-family: 'Space Mono', monospace; font-size: 11px;
-    letter-spacing: .1em; text-transform: uppercase;
-    cursor: none; position: relative; overflow: hidden;
-    transition: color .35s; margin-top: .5rem; align-self: flex-start;
-  }
-  .cp-send::before {
-    content: ''; position: absolute; inset: 0;
-    background: #C8401A; transform: translateX(-101%);
-    transition: transform .4s cubic-bezier(.16,1,.3,1); z-index: 0;
-  }
-  .cp-send:hover::before { transform: translateX(0); }
-  .cp-send span, .cp-send-arrow { position: relative; z-index: 1; }
-  .cp-send-arrow { display: inline-block; transition: transform .3s cubic-bezier(.16,1,.3,1); }
-  .cp-send:hover .cp-send-arrow { transform: translateX(5px); }
-
-  .cp-sent {
-    display: flex; align-items: center; gap: .9rem;
-    padding: 1rem 1.4rem; border: 1px solid var(--ink);
-    font-size: 13px; margin-top: .5rem; align-self: flex-start;
-  }
-  .cp-sent-icon {
-    width: 18px; height: 18px; border-radius: 50%;
-    background: var(--ink); display: flex; align-items: center; justify-content: center;
-    color: var(--cream); font-size: 10px; flex-shrink: 0;
-  }
-
   .cp-footer {
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.3rem 3.5rem; border-top: 1px solid var(--border);
@@ -302,11 +248,6 @@ export default function ContactPage() {
   const dotRef   = useRef(null);
   const ringRef  = useRef(null);
   const rowRefs  = useRef([]);
-  const availRef = useRef(null);
-
-  const [form, setForm]       = useState({ name: "", email: "", message: "" });
-  const [sent, setSent]       = useState(false);
-  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     let mx = 0, my = 0, rx = 0, ry = 0, raf;
@@ -338,15 +279,8 @@ export default function ContactPage() {
       el.style.transitionDelay = `${0.08 + i * 0.07}s`;
       obs.observe(el);
     });
-    if (availRef.current) obs.observe(availRef.current);
     return () => obs.disconnect();
   }, []);
-
-  const handleSubmit = () => {
-    if (!form.name || !form.email) return;
-    setSending(true);
-    setTimeout(() => { setSending(false); setSent(true); }, 1200);
-  };
 
   return (
     <>
@@ -356,42 +290,28 @@ export default function ContactPage() {
         <div className="cp-ring" ref={ringRef} />
 
         <nav className="cp-nav">
-          <a href="#" className="cp-nav-back">← Back</a>
+          <a className="cp-nav-back" href="/">Back</a>
         </nav>
 
         <div className="cp-body">
-          {/* LEFT */}
           <div className="cp-left">
-            <div className="cp-wm">CONTACT</div>
-            <div>
-              <div className="cp-tag">
-                <span className="cp-tag-line" />
-                GET IN TOUCH
-              </div>
-              <div className="cp-left-h">
-                <h1>
-                  <span className="cp-hl"><span>LET'S</span></span>
-                  <span className="cp-hl"><span>BUILD</span></span>
-                </h1>
-                <div className="cp-divider-wrap"><span className="cp-accent-bar" /></div>
-                <h1 style={{marginTop:0}}>
-                  <span className="cp-hl"><span>TOGETHER</span></span>
-                </h1>
-              </div>
+            <div className="cp-tag">
+              <span className="cp-tag-line" />
+              CONTACT
             </div>
-            <div className="cp-left-bottom">
-              <p className="cp-left-sub">
-                Available for freelance opportunities and full-time roles.
-                Let's discuss your next project.
-              </p>
-              <div className="cp-stat-box">
-                <div>
-                  <span className="cp-stat-num">100%</span>
-                  <span className="cp-stat-label">Client Satisfaction</span>
-                </div>
-                <div className="cp-stat-right">BASED IN<br />BIHAR, INDIA</div>
-              </div>
+            <div className="cp-left-h">
+              <h1>
+                <span className="cp-hl"><span>LET'S</span></span>
+                <span className="cp-hl"><span>BUILD</span></span>
+              </h1>
+              <div className="cp-divider-wrap"><span className="cp-accent-bar" /></div>
+              <h1 style={{marginTop:0}}>
+                <span className="cp-hl"><span>TOGETHER</span></span>
+              </h1>
             </div>
+            <p className="cp-hero-copy">
+              Ambitious Full Stack Developer with strong expertise in building responsive, high-performance web applications using React.js and Next.js.
+            </p>
           </div>
 
           {/* RIGHT */}
