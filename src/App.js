@@ -373,11 +373,11 @@ function App() {
         width: '100%',
         zIndex: 1000
       }}>
-        <div className="header-right" style={{ display: 'flex', gap: '32px', alignItems: 'center', justifyContent: 'flex-end', width: '100%' }}>
-          <a href="#projects" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Projects</a>
-          <a href="#skills" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Skills</a>
-          <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>GitHub</a>
-          <Link to="/contact" style={{ color: 'var(--paper)', background: 'var(--ink)', textDecoration: 'none', fontWeight: '500', letterSpacing: '1px', fontSize: '12px', padding: '9px 20px', display: 'inline-flex', alignItems: 'center', gap: '6px', transition: 'background .2s, transform .2s' }} onMouseEnter={e => e.currentTarget.style.background='#333'} onMouseLeave={e => e.currentTarget.style.background='var(--ink)'}>Contact →</Link>
+        <div className="header-right">
+          <a href="#projects" className="header-nav-link" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Projects</a>
+          <a href="#skills" className="header-nav-link header-hide-sm" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Skills</a>
+          <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="header-nav-link header-hide-sm" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>GitHub</a>
+          <Link to="/contact" className="header-cta" style={{ color: 'var(--paper)', background: 'var(--ink)', textDecoration: 'none', fontWeight: '500', letterSpacing: '1px', fontSize: '12px', padding: '9px 20px', display: 'inline-flex', alignItems: 'center', gap: '6px', transition: 'background .2s, transform .2s' }} onMouseEnter={e => e.currentTarget.style.background='#333'} onMouseLeave={e => e.currentTarget.style.background='var(--ink)'}>Contact →</Link>
         </div>
       </header>
 

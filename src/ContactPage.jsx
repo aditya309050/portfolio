@@ -58,22 +58,20 @@ const styles = `
     position: relative;
   }
 
-  .cp-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: #C8401A;
-    transform: translateX(-50%);
-    opacity: .95;
-  }
-
   .cp-left {
-    padding: 4rem 4rem 3rem;
+    padding: 4rem 5rem 3rem;
     display: flex; flex-direction: column; justify-content: center;
     position: relative; overflow: hidden;
+    border-right: 1px solid var(--border);
+  }
+
+  .cp-accent-box {
+    position: absolute;
+    top: 50%; right: -1px;
+    transform: translateY(-50%);
+    width: 6px; height: 120px;
+    background: #C8401A;
+    z-index: 10;
   }
 
   .cp-hero-copy {
@@ -82,6 +80,7 @@ const styles = `
     line-height: 1.8;
     color: var(--ink);
     opacity: .9;
+    margin-top: 2rem;
   }
 
   .cp-tag {
@@ -99,8 +98,9 @@ const styles = `
   }
 
   .cp-left-h {
-    margin-top: 3rem; position: relative; z-index: 2;
+    margin-top: 2rem; position: relative; z-index: 2;
     opacity: 0; animation: cpFU .7s .5s cubic-bezier(.16,1,.3,1) forwards;
+    margin-bottom: 1.5rem;
   }
   .cp-left-h h1 {
     font-family: 'Bebas Neue', sans-serif;
@@ -156,8 +156,8 @@ const styles = `
   }
 
   .cp-right {
-    padding: 3.5rem 4rem;
-    display: flex; flex-direction: column; gap: 2.5rem;
+    padding: 4rem 5rem 3rem;
+    display: flex; flex-direction: column; gap: 2.5rem; justify-content: center;
     opacity: 0; animation: cpFU .7s 1.1s cubic-bezier(.16,1,.3,1) forwards;
   }
 
@@ -231,12 +231,103 @@ const styles = `
     0%,100% { box-shadow: 0 0 0 0 rgba(39,174,96,.4); }
     50%      { box-shadow: 0 0 0 7px rgba(39,174,96,0); }
   }
+
+  /* ── MD (≤768px) ── */
+  @media (max-width: 768px) {
+    .cp-body {
+      grid-template-columns: 1fr;
+    }
+    .cp-left {
+      padding: 2.5rem 2rem 2rem;
+      border-bottom: 1px solid var(--border);
+      border-right: none;
+    }
+    .cp-accent-box {
+      display: none;
+    }
+    .cp-left-h h1 {
+      font-size: clamp(4rem, 14vw, 7rem);
+    }
+    .cp-right {
+      padding: 2.5rem 2rem 3rem;
+    }
+    .cp-nav {
+      padding: 1.2rem 2rem;
+    }
+    .cp-footer {
+      padding: 1.2rem 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .cp-hero-copy {
+      max-width: 100%;
+      font-size: 0.95rem;
+    }
+    .cp-stat-box {
+      padding: 1.2rem 1.5rem;
+    }
+  }
+
+  /* ── SM (≤480px) ── */
+  @media (max-width: 480px) {
+    .cp-nav {
+      padding: 1rem 1.2rem;
+    }
+    .cp-left {
+      padding: 2rem 1.2rem 1.8rem;
+    }
+    .cp-left-h {
+      margin-top: 2rem;
+    }
+    .cp-left-h h1 {
+      font-size: clamp(3.2rem, 16vw, 5.5rem);
+    }
+    .cp-right {
+      padding: 2rem 1.2rem 2.5rem;
+      gap: 2rem;
+    }
+    .cp-tag {
+      font-size: 10px;
+    }
+    .cp-row-val {
+      font-size: 1.1rem;
+    }
+    .cp-row-label {
+      width: 76px;
+      font-size: 9px;
+    }
+    .cp-social {
+      gap: .7rem;
+    }
+    .cp-pill {
+      padding: .55rem 1rem;
+      font-size: 10px;
+    }
+    .cp-stat-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+    }
+    .cp-stat-right {
+      text-align: left;
+    }
+    .cp-footer {
+      padding: 1rem 1.2rem;
+      font-size: 9px;
+    }
+    .cp-hero-copy {
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+  }
 `;
 
 const CONTACT_ROWS = [
   { label: "Email",    value: "adityaraj309050@gmail.com", href: "mailto:adityaraj309050@gmail.com" },
-  { label: "Phone",    value: "8969940709",                href: "tel:+918969940709" },
-  { label: "Location", value: "Bihar, India",              href: "#" },
+  { label: "Phone",    value: "+91 89699 40709",           href: "tel:+918969940709" },
+  { label: "Location", value: "Bangalore, India",          href: "https://maps.google.com/?q=Bangalore,India" },
 ];
 
 const SOCIALS = [
@@ -303,15 +394,13 @@ export default function ContactPage() {
               <h1>
                 <span className="cp-hl"><span>LET'S</span></span>
                 <span className="cp-hl"><span>BUILD</span></span>
-              </h1>
-              <div className="cp-divider-wrap"><span className="cp-accent-bar" /></div>
-              <h1 style={{marginTop:0}}>
                 <span className="cp-hl"><span>TOGETHER</span></span>
               </h1>
             </div>
             <p className="cp-hero-copy">
               Ambitious Full Stack Developer with strong expertise in building responsive, high-performance web applications using React.js and Next.js.
             </p>
+            <div className="cp-accent-box" />
           </div>
 
           {/* RIGHT */}

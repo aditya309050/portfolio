@@ -97,6 +97,19 @@ header{
 #burger.active .bline:nth-child(2){opacity:0;transform:scaleX(0)}
 #burger.active .bline:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
+/* ── HEADER NAV LINKS ── */
+.header-right{
+  display:flex;align-items:center;gap:28px;
+  justify-content:flex-end;width:100%;
+}
+.header-nav-link{
+  font-size:13px;font-weight:600;letter-spacing:1px;
+  white-space:nowrap;
+}
+.header-cta{
+  flex-shrink:0;
+}
+
 /* ── CANVAS BG ── */
 #canvas{
   position:fixed;inset:0;pointer-events:none;z-index:0;
@@ -456,4 +469,166 @@ header{
   position:fixed;left:0;top:0;width:3px;height:0%;
   background:var(--red);z-index:9999;pointer-events:none;
   transition:height .05s;
+}
+
+/* ── MD BREAKPOINT (481px – 768px) ── */
+@media (max-width:768px) {
+  /* Header */
+  header{
+    padding:20px 24px;
+  }
+  .logo{font-size:17px}
+  .header-right{gap:16px}
+  .header-nav-link{font-size:12px}
+  .header-cta{font-size:11px !important;padding:7px 16px !important}
+
+  /* Hero – stack columns */
+  .hero{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+  }
+  .hero-left{
+    padding:120px 24px 40px;
+    border-right:none;
+    border-bottom:1px solid var(--border);
+  }
+  .hero-right{
+    padding:32px 24px 40px;
+  }
+  .hero-accent-box{display:none}
+  .scramble-title{
+    font-size:clamp(70px,16vw,110px);
+  }
+  .hero-desc{max-width:100%}
+  .hero-stat-row{
+    grid-template-columns:1fr 1fr;
+  }
+  .hero-bottom{
+    grid-column:1;
+    height:auto;
+    flex-wrap:wrap;
+  }
+  .hb-cell{
+    flex:1 1 50%;
+    border-bottom:1px solid var(--border);
+    padding:12px 16px;
+  }
+  .hb-cell:last-child{border-right:1px solid var(--border)}
+
+  /* Nav overlay */
+  .nav-left{padding:60px 24px 48px}
+  .nav-counter{left:24px;top:28px}
+  .nav-text{font-size:clamp(40px,10vw,64px)}
+  .nav-right-panel{display:none}
+  .nav-bottom{padding:0 24px;flex-wrap:wrap;gap:8px;height:auto;padding-top:12px;padding-bottom:12px}
+
+  /* Projects grid – simplify to 6-col */
+  .grid-broken{
+    grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:100px;
+  }
+  .col-3{grid-column:span 3}
+  .col-4{grid-column:span 4}
+  .col-5{grid-column:span 5}
+  .col-6{grid-column:span 6}
+  .col-7{grid-column:span 6}
+  .col-8{grid-column:span 6}
+  .col-12{grid-column:span 6}
+  .row-2{grid-row:span 2}
+  .row-3{grid-row:span 2}
+  .row-4{grid-row:span 3}
+  .row-5{grid-row:span 3}
+  .row-6{grid-row:span 4}
+
+  /* Lab section */
+  .lab-section{padding:0 24px 60px}
+  .lab-header{padding:40px 0 28px}
+
+  /* Skills list */
+  .list-section{padding:0 24px 80px}
+  .exp-list-item{
+    grid-template-columns:48px 1fr 80px;
+    gap:0;
+  }
+  .eli-cat{display:none}
+  .eli-year{font-size:10px}
+  .eli-arrow{display:none}
+
+  /* Footer CTA */
+  .lab-footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:32px;
+    padding:60px 24px;
+  }
+  .lf-stat-col{text-align:left}
+  .lf-btns{flex-direction:column;width:100%}
+  .btn-ink,.btn-outline{width:100%;justify-content:center}
+}
+
+/* ── SM BREAKPOINT (≤480px) ── */
+@media (max-width:480px) {
+  /* Header */
+  header{padding:16px 16px}
+  .logo{font-size:15px;letter-spacing:2px}
+  .page-tag{display:none}
+  .header-right{gap:10px}
+  .header-hide-sm{display:none}
+  .header-nav-link{font-size:12px}
+  .header-cta{padding:7px 14px !important;font-size:11px !important}
+
+  /* Hero */
+  .hero-left{padding:100px 16px 32px}
+  .hero-right{padding:24px 16px 32px}
+  .scramble-title{
+    font-size:clamp(58px,18vw,90px);
+    letter-spacing:-2px;
+  }
+  .hero-stat-row{grid-template-columns:1fr 1fr}
+  .hero-stat{padding:14px 14px}
+  .hero-stat-num{font-size:36px}
+  .hero-stat-label{font-size:10px}
+  .hb-cell{font-size:9px;padding:10px 12px;flex:1 1 50%}
+
+  /* Ticker */
+  .ticker-item{font-size:13px;gap:18px;padding:0 18px}
+
+  /* Nav overlay */
+  .nav-left{padding:72px 16px 48px}
+  .nav-text{font-size:clamp(36px,13vw,56px)}
+  .nav-counter{left:16px}
+  .nav-bottom{padding:0 16px;gap:6px}
+
+  /* Projects grid – single column pairs */
+  .grid-broken{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:120px;
+  }
+  .col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-12{grid-column:span 2}
+  .row-2,.row-3{grid-row:span 2}
+  .row-4,.row-5{grid-row:span 3}
+  .row-6{grid-row:span 4}
+  .tile-name{font-size:clamp(16px,4vw,24px)}
+  .tile-type-only .tile-name{font-size:clamp(32px,8vw,52px)}
+
+  /* Lab section */
+  .lab-section{padding:0 16px 48px}
+  .lab-h-title{font-size:clamp(28px,8vw,48px)}
+  .lab-h-meta{font-size:10px}
+
+  /* Skills list */
+  .list-section{padding:0 16px 60px}
+  .exp-list-item{
+    grid-template-columns:40px 1fr;
+    padding:16px 0;
+  }
+  .eli-num{font-size:10px}
+  .eli-name{font-size:clamp(18px,5vw,26px)}
+  .eli-cat,.eli-year,.eli-arrow{display:none}
+
+  /* Footer CTA */
+  .lab-footer{padding:48px 16px}
+  .lf-title{font-size:clamp(32px,10vw,52px)}
+  .lf-sub{font-size:13px}
+  .lf-big-num{font-size:clamp(48px,14vw,80px)}
 }

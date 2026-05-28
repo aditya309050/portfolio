@@ -840,9 +840,12 @@ body.nav-open #nav-overlay::after {
 }
 
 @media (max-width: 1024px) {
-  .project-featured,
-  .projects-grid {
+  .project-featured {
     grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav-right-panel {
@@ -854,29 +857,259 @@ body.nav-open #nav-overlay::after {
   }
 }
 
+/* ── MD (481px – 768px) ── */
 @media (max-width: 768px) {
-  #site-header,
-  .work-hero,
-  .projects-section,
-  .filter-bar,
-  .work-footer {
-    padding-left: 24px;
-    padding-right: 24px;
+  /* Site header (id-based) */
+  #site-header {
+    padding: 20px 24px;
   }
 
-  .work-hero-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .nav-page-label {
+    display: none;
   }
 
+  .nav-right-group {
+    gap: 20px;
+  }
+
+  /* Nav overlay */
   .nav-left {
-    padding: 48px 24px;
+    padding: 60px 24px;
+  }
+
+  .nav-counter {
+    left: 24px;
+    top: 28px;
+  }
+
+  .nav-text {
+    font-size: clamp(40px, 10vw, 64px);
   }
 
   .nav-bottom {
     padding: 0 24px;
     flex-wrap: wrap;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 10px;
+  }
+
+  /* Work hero */
+  .work-hero {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 40px;
+  }
+
+  .page-center-title {
+    font-size: clamp(40px, 11vw, 80px);
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    padding: 16px 24px;
+    gap: 8px;
+  }
+
+  .filter-label {
+    display: none;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding: 0 24px 80px;
+  }
+
+  .project-featured {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-info {
+    padding: 20px 20px 20px;
+  }
+
+  .proj-footer {
+    padding: 0 20px 20px;
+  }
+
+  /* Marquee */
+  .marquee-wrap {
+    padding: 14px 0;
+  }
+
+  .marquee-item {
+    font-size: 15px;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Work footer */
+  .work-footer {
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* ── SM (≤480px) ── */
+@media (max-width: 480px) {
+  /* Site header */
+  #site-header {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .nav-right-group {
     gap: 12px;
+  }
+
+  .nav-page-label {
+    display: none;
+  }
+
+  /* Burger */
+  #burger {
+    padding: 6px;
+  }
+
+  .burger-line {
+    width: 26px;
+  }
+
+  /* Nav overlay */
+  .nav-left {
+    padding: 72px 16px 48px;
+  }
+
+  .nav-counter {
+    left: 16px;
+    top: 20px;
+  }
+
+  .nav-text {
+    font-size: clamp(34px, 13vw, 54px);
+  }
+
+  .nav-num {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .nav-tag {
+    display: none;
+  }
+
+  .nav-bottom {
+    padding: 10px 16px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .nav-bottom-link {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* Work hero */
+  .work-hero {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+  }
+
+  .page-center-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .page-center-title {
+    font-size: clamp(36px, 14vw, 64px);
+    letter-spacing: -1px;
+  }
+
+  .available-badge {
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    padding: 12px 16px;
+  }
+
+  .filter-btn {
+    font-size: 10px;
+    padding: 5px 14px;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding: 0 16px 60px;
+  }
+
+  .project-featured {
+    grid-template-columns: 1fr;
+    padding-top: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-card.large .proj-name {
+    font-size: clamp(30px, 8vw, 52px);
+  }
+
+  .proj-name {
+    font-size: clamp(22px, 6vw, 36px);
+  }
+
+  .proj-info {
+    padding: 16px 16px 14px;
+  }
+
+  .proj-footer {
+    padding: 0 16px 16px;
+  }
+
+  .proj-desc {
+    font-size: 12px;
+  }
+
+  /* Marquee */
+  .marquee-item {
+    font-size: 13px;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  /* Work footer */
+  .work-footer {
+    padding: 24px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .wf-left {
+    font-size: 10px;
+  }
+
+  .wf-cta {
+    font-size: 12px;
+    padding: 10px 18px;
+    width: 100%;
+    justify-content: center;
   }
 }
