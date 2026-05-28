@@ -326,8 +326,8 @@ const styles = `
 
 const CONTACT_ROWS = [
   { label: "Email",    value: "adityaraj309050@gmail.com", href: "mailto:adityaraj309050@gmail.com" },
-  { label: "Phone",    value: "+91 89699 40709",           href: "tel:+918969940709" },
-  { label: "Location", value: "Bangalore, India",          href: "https://maps.google.com/?q=Bangalore,India" },
+  { label: "Phone",    value: "8969940709",                href: "tel:+918969940709" },
+  { label: "Location", value: "Bihar, India",              href: "#" },
 ];
 
 const SOCIALS = [
