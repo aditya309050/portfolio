@@ -331,8 +331,8 @@ const CONTACT_ROWS = [
 ];
 
 const SOCIALS = [
-  { label: "GitHub",   href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "GitHub",   href: "https://github.com/aditya309050" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/aditya-singh-113078389/" },
 ];
 
 export default function ContactPage() {
@@ -421,7 +421,7 @@ export default function ContactPage() {
               <div className="cp-sec-head">Social</div>
               <div className="cp-social">
                 {SOCIALS.map(({ label, href }) => (
-                  <a key={label} href={href} className="cp-pill">
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="cp-pill">
                     <span>{label}</span>
                     <span className="cp-pill-arrow">↗</span>
                   </a>

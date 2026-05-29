@@ -378,8 +378,63 @@ function App() {
           <a href="#skills" className="header-nav-link header-hide-sm" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>Skills</a>
           <a href="https://github.com/aditya309050" target="_blank" rel="noreferrer" className="header-nav-link header-hide-sm" style={{ color: 'black', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '1px' }}>GitHub</a>
           <Link to="/contact" className="header-cta" style={{ color: 'var(--paper)', background: 'var(--ink)', textDecoration: 'none', fontWeight: '500', letterSpacing: '1px', fontSize: '12px', padding: '9px 20px', display: 'inline-flex', alignItems: 'center', gap: '6px', transition: 'background .2s, transform .2s' }} onMouseEnter={e => e.currentTarget.style.background='#333'} onMouseLeave={e => e.currentTarget.style.background='var(--ink)'}>Contact →</Link>
+          
+          <button id="burger" className={isNavOpen ? 'active' : ''} onClick={() => setIsNavOpen(!isNavOpen)} aria-label="Toggle Menu">
+            <span className="bline"></span>
+            <span className="bline"></span>
+            <span className="bline"></span>
+          </button>
         </div>
       </header>
+
+      {/* MOBILE MENU OVERLAY */}
+      {isNavOpen && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          background: 'var(--paper)',
+          zIndex: 999,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '2.5rem',
+          opacity: 0,
+          animation: 'fadeInMenu 0.4s cubic-bezier(.16,1,.3,1) forwards',
+        }}>
+          <style>{`
+            @keyframes fadeInMenu {
+              to { opacity: 1; }
+            }
+          `}</style>
+          <a href="#projects" onClick={() => setIsNavOpen(false)} style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: '4.5rem',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            letterSpacing: '2px',
+            lineHeight: 1
+          }}>PROJECTS</a>
+          
+          <a href="#skills" onClick={() => setIsNavOpen(false)} style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: '4.5rem',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            letterSpacing: '2px',
+            lineHeight: 1
+          }}>SKILLS</a>
+          
+          <Link to="/contact" onClick={() => setIsNavOpen(false)} style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: '4.5rem',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            letterSpacing: '2px',
+            lineHeight: 1
+          }}>CONTACT</Link>
+        </div>
+      )}
 
       {/* HERO */}
       <section className="hero" id="about">
