@@ -535,15 +535,15 @@ function App() {
             <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
           </a>
 
-          <div className="exp-tile col-3 row-2 tile-red">
+          <a href="https://vectrfl-seven.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-3 row-2 tile-red" aria-label="Open Vectr project">
             <div className="tile-status status-live"></div>
             <div className="tile-inner">
               <div className="tile-num">PRJ — 004</div>
-              <div className="tile-name">Travelers</div>
-              <div className="tile-meta">Travel Platform</div>
+              <div className="tile-name">Vectr</div>
+              <div className="tile-meta">clone of vectrfl</div>
             </div>
-            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">React & Strapi</div></div>
-          </div>
+            <div className="tile-hover"><div className="tile-hover-arrow">↗</div><div className="tile-hover-text">Open Project</div></div>
+          </a>
 
           {/* Row 2 */}
           <a href="https://digital-hero-theta.vercel.app/" target="_blank" rel="noreferrer" className="exp-tile col-4 row-3 tile-blue" aria-label="Open Kurage Agency project">
